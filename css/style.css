@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+* a {
+  color: #f3f3f2;
+  text-decoration: none;
+}
+
+* ul {
+  list-style: none;
+}
+
+#for_transform {
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+#for_transform.active {
+  -webkit-transform: translateX(-70%);
+          transform: translateX(-70%);
+  z-index: -100;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #393e4f;
+  color: #f3f3f2;
+}
+
+header h1 {
+  margin-left: 2rem;
+}
+
+header #nav ul {
+  position: fixed;
+  top: calc(2rem + 48px);
+  right: -70%;
+  height: calc(100vh - (2rem + 48px));
+  width: 70%;
+  padding-bottom: calc(2rem + 48px);
+  background-color: #f3f3f2;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+header #nav ul li {
+  padding: calc((100vh - (4rem + 96px) - 6rem) / 6) 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+header #nav ul li a {
+  color: #595857;
+}
+
+header #nav.active ul {
+  right: 0;
+}
+
+header #hamburger_btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  height: 48px;
+  width: 48px;
+}
+
+header #hamburger_btn div {
+  position: fixed;
+  right: calc(1rem + 4px);
+  height: 5px;
+  width: 40px;
+  border-radius: 2px;
+  background-color: #f3f3f2;
+}
+
+header #hamburger_btn :nth-of-type(1) {
+  top: calc(1rem + 9px);
+}
+
+header #hamburger_btn :nth-of-type(2) {
+  top: calc(1rem + 21.5px);
+}
+
+header #hamburger_btn :nth-of-type(3) {
+  top: calc(1rem + 34px);
+}
+
+@media (min-width: 640px) {
+  header {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header #nav ul {
+    top: calc(1rem + 12px);
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-transition: 0s;
+    transition: 0s;
+  }
+  header #nav ul li {
+    padding: 0;
+    margin: 0 2rem;
+    font-size: 1rem;
+  }
+  header #nav ul li a {
+    color: #f3f3f2;
+  }
+  header #hamburger_btn {
+    display: none;
+  }
+}
+
+.cover {
+  height: 60vh;
+  width: 100%;
+}
+
+.cover img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 640px) {
+  .cover {
+    height: 70vh;
+  }
+}
+
+main {
+  color: #595857;
+}
+
+main section h2 {
+  text-align: center;
+}
+
+#service {
+  background-color: #f3f3f2;
+}
+
+#service ul {
+  padding: 2.5rem 5%;
+}
+
+#service ul li {
+  padding: 1rem;
+}
+
+#service ul li .service_img {
+  height: 30vh;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+#service ul li .service_img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 640px) {
+  #service ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #service ul li .service_img {
+    height: 35vh;
+  }
+}
+
+#news {
+  background-color: #dcdddd;
+  padding: 2.5rem 0;
+}
+
+#news h2,
+#news span {
+  color: #393e4f;
+}
+
+#news ul {
+  width: 75%;
+  margin: 0 auto;
+}
+
+#news ul li {
+  margin: 1.5rem 0;
+}
+
+#news ul li span {
+  font-weight: bold;
+}
+
+#access .googlemap {
+  height: 40vh;
+  width: 100%;
+}
+
+#access .googlemap iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 640px) {
+  #access .googlemap {
+    height: 60vh;
+  }
+}
+
+footer {
+  padding: 1rem 0;
+  background-color: #393e4f;
+  color: #f3f3f2;
+  text-align: center;
+}
+
+footer ul .footer_small {
+  padding: 0.5rem 0;
+}
+
+footer ul ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer ul ul li {
+  margin: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer ul .footer_small {
+    margin: 0 2rem;
+    text-align: left;
+  }
+}
+/*# sourceMappingURL=style.css.map */
